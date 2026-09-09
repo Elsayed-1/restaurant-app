@@ -1,0 +1,23 @@
+ 
+ 
+.logo img{
+    width: 150px;
+}
+.listitem ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.listitem ul li{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease  ;
+    
+}
+.listitem ul li:hover{
+    box-shadow: 0px 0px 10px black;
+ padding: 5px;
+    border-radius:20px;
+}
