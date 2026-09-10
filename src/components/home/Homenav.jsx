@@ -1,7 +1,9 @@
 import React from 'react'
 import logo from"../../assets/logo/logo.png"
 import "./Homenav.css"
+import { useNavigate } from 'react-router-dom'
 function Homenav() {
+    const mynave=useNavigate()
   return (
     <div>
         <nav className='navbar'>
@@ -15,7 +17,7 @@ function Homenav() {
             <li>about</li>
             <li>our menu</li>
             <li>shop</li>
-            <li>blog</li>
+            <li onClick={()=>mynave("/favo")}>Favo</li>
             <li>contant</li>
             <li>cart</li>
         </ul>

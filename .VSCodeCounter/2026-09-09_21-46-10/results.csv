@@ -1,0 +1,15 @@
+"filename", "language", "PostCSS", "JavaScript JSX", "comment", "blank", "total"
+"d:\React\resturant\restaurant-app\src\App.css", "PostCSS", 0, 0, 184, 1, 185
+"d:\React\resturant\restaurant-app\src\App.jsx", "JavaScript JSX", 0, 12, 0, 7, 19
+"d:\React\resturant\restaurant-app\src\components\about\About.css", "PostCSS", 67, 0, 0, 13, 80
+"d:\React\resturant\restaurant-app\src\components\about\About.jsx", "JavaScript JSX", 0, 26, 0, 9, 35
+"d:\React\resturant\restaurant-app\src\components\about\Why-us.jsx", "JavaScript JSX", 0, 41, 0, 3, 44
+"d:\React\resturant\restaurant-app\src\components\home\Hero.css", "PostCSS", 5, 0, 0, 0, 5
+"d:\React\resturant\restaurant-app\src\components\home\Herosection.jsx", "JavaScript JSX", 0, 13, 0, 5, 18
+"d:\React\resturant\restaurant-app\src\components\home\Homebody.css", "PostCSS", 70, 0, 0, 8, 78
+"d:\React\resturant\restaurant-app\src\components\home\Homebody.jsx", "JavaScript JSX", 0, 32, 0, 3, 35
+"d:\React\resturant\restaurant-app\src\components\home\Homenav.css", "PostCSS", 20, 0, 0, 3, 23
+"d:\React\resturant\restaurant-app\src\components\home\Homenav.jsx", "JavaScript JSX", 0, 28, 0, 3, 31
+"d:\React\resturant\restaurant-app\src\index.css", "PostCSS", 0, 0, 111, 1, 112
+"d:\React\resturant\restaurant-app\src\main.jsx", "JavaScript JSX", 0, 12, 0, 2, 14
+"Total", "-", 162, 164, 295, 58, 679

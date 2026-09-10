@@ -4,77 +4,62 @@
   align-items: center;
   align-items: center;
   justify-content: center;
-   
+
   width: 100%;
 }
 .about .textabout {
   margin: 20px 0px;
-  
+
   width: 70%;
   text-align: center;
   color: black;
 }
-.about .textabout h1{
-    font-family: Oswald;
+.about .textabout h1 {
+  font-family: Oswald;
 }
-.about .textabout p{
-    font-weight: 300;
-    color: rgba(0, 0, 0, 0.449);
-    font-family:Roboto ;
-    margin: 20px 0px;
+.about .textabout p {
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.449);
+  font-family: Roboto;
+  margin: 20px 0px;
 }
 
-.about .btnabout button{
-    width: 180px;
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-   background-color: rgb(174, 27, 27);
-   color: white;
-   text-transform: uppercase;
-   font-family:Oswald ;
-   letter-spacing: 1px;
-     box-shadow: 0px 0px 10px black;
-     margin: 20px 0px;
-     transition: .3s ease;
+.about .btnabout button {
+  width: 180px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(174, 27, 27);
+  color: white;
+  text-transform: uppercase;
+  font-family: Oswald;
+  letter-spacing: 1px;
+  box-shadow: 0px 0px 10px black;
+  margin: 20px 0px;
+  transition: 0.3s ease;
 }
-.about .btnabout button:hover{
-   
-    
-    transform: translateY(-2px) scale(1.01);
-    
-}
-.about .aboutimgs{
-    position: relative;
-}
-.about .aboutimgs img {
-  width:100%;
-  height: auto;
- 
-   
+.about .btnabout button:hover {
+  transform: translateY(-2px) scale(1.01);
 }
  
-.why-us{
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    
-   background-color: yellow;
-    width: 100%;
-    position: absolute;
-    top: 130px;
+.why-us {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  background-color: rgb(255, 255, 0);
+  width: 100%;
 }
 .why-us .one {
-    text-align: center;
-    
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    height: auto;
+  text-align: center;
+
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  height: auto;
 }
 
-.why-us .one img{
-width: 100px;
-margin: 5px 0px;
+.why-us .one img {
+  width: 100px;
+  margin: 5px 0px;
 }
- 

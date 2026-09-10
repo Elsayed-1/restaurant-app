@@ -19,13 +19,12 @@ function About() {
       <div className="btnabout">
         <button>EXPLORE FULL MENU</button>
       </div>
-      <div className="aboutimgs">
-        <img src={boggerimg} alt="" />
+       
+         
     
       <Whyus/>
 
-  </div>
-
+   
 
     </div>
   );
