@@ -4,10 +4,10 @@ import "./Hero.css"
 import Homebody from './Homebody'
  
 
-function Herosection() {
+function Herosection({cardnum}) {
   return (
     <div className='hero'>
-      <Homenav/>
+      <Homenav cardnum={cardnum}/>
       <Homebody/>
       
     </div>

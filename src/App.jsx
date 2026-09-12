@@ -1,22 +1,24 @@
-import About from "./components/About/About"
-import Burger from "./components/Burgers/Burger"
-import Herosection from "./components/home/Herosection"
-import Homenav from "./components/home/Homenav"
+import About from "./components/About/About";
+import Burger from "./components/Burgers/Burger";
+import Herosection from "./components/home/Herosection";
+import Homenav from "./components/home/Homenav";
 
 /////img//////
-import img1 from "./assets/menu/burger-11.jpg"
-import img2 from "./assets/menu/burger-12.jpg"
-import img3 from "./assets/menu/burger-13.jpg"
-import img4 from "./assets/menu/burger-14.jpg"
-import img5 from "./assets/menu/burger-15.jpg"
-import img6 from "./assets/menu/burger-16.jpg"
-import img7 from "./assets/menu/burger-17.jpg"
-import img8 from "./assets/menu/burger-18.jpg"
-import { useState } from "react"
-import { Route, Routes } from "react-router-dom"
-import Favorite from "./components/favo/Favorite"
- 
- const dataitem = [
+import img1 from "./assets/menu/burger-11.jpg";
+import img2 from "./assets/menu/burger-12.jpg";
+import img3 from "./assets/menu/burger-13.jpg";
+import img4 from "./assets/menu/burger-14.jpg";
+import img5 from "./assets/menu/burger-15.jpg";
+import img6 from "./assets/menu/burger-16.jpg";
+import img7 from "./assets/menu/burger-17.jpg";
+import img8 from "./assets/menu/burger-18.jpg";
+import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Favorite from "./components/favo/Favorite";
+import Basic from "./components/basicfile/Basic";
+//////////////////
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+const dataitem = [
   {
     id: "0001",
     image: img1,
@@ -35,7 +37,7 @@ import Favorite from "./components/favo/Favorite"
   },
   {
     id: "0003",
-    image:img1,
+    image: img1,
     title: "Black Sheep",
     paragraph: "American cheese, tomato relish, avocado, lettuce, red onion",
     rating: 4,
@@ -80,14 +82,16 @@ import Favorite from "./components/favo/Favorite"
     paragraph: "cheddar cheese, ketchup, mustard, pickles, onion",
     rating: 2.0,
     price: 89.12,
-  }, {
+  },
+  {
     id: "0009",
     image: img7,
     title: "Black Sheep",
     paragraph: "American cheese, tomato relish, avocado, lettuce, red onion",
     rating: 2.0,
     price: 89.12,
-  }, {
+  },
+  {
     id: "00010",
     image: img8,
     title: "Classic Burger",
@@ -107,18 +111,49 @@ import Favorite from "./components/favo/Favorite"
 ];
 
 function App() {
- const [isfavo,setIsfavo]=useState( [])
- 
+  const [isfavo, setIsfavo] = useState(() => {
+    const savedFavo = localStorage.getItem("myFavorites");
+    return savedFavo ? JSON.parse(savedFavo) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("myFavorites", JSON.stringify(isfavo));
+  }, [isfavo]);
+
+  const toggelfavo = (item) => {
+    setIsfavo((prev) => {
+      const exists = prev.find((fav) => fav.id == item.id);
+      if (exists) {
+        return prev.filter((fav) => fav.id !== item.id);
+      } else {
+        return [...prev, item];
+      }
+    });
+  };
+
+  const [cardnum, setCartnum] = useState(0);
+
   return (
-   <>
-   <Routes>
-    <Route path="/favo" element={<Favorite/>} />
-   </Routes>
-  <Herosection/>
-   <About/>
-   <Burger data={dataitem} setIsfavo={setIsfavo}/>
-   </>
-  )
+    <>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Basic
+              toggelfavo={toggelfavo}
+              cardnum={cardnum}
+              setCartnum={setCartnum}
+              data={dataitem}
+              setIsfavo={setIsfavo}
+            />
+          }
+        />
+        <Route path="/favo" element={<Favorite isfavo={isfavo} />} />
+      </Routes>
+
+      {console.log(isfavo)}
+    </>
+  );
 }
 
-export default App
+export default App;

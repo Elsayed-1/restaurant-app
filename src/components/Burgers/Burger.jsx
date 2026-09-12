@@ -9,6 +9,18 @@ import {
 } from "react-icons/fa";
 
 function renderstars(rate) {
+
+
+
+
+
+
+
+
+
+
+
+
   const stars = [];
   for (let i = 1; i < rate; i++) {
     if (rate >= 1) {
@@ -22,11 +34,19 @@ function renderstars(rate) {
   return stars;
 }
 
-function Burgeritem({ item, setIsfavo }) {
+function Burgeritem({toggelfavo, item, setIsfavo,setCartnum }) {
+
+///////////////
+function handelnumberitem() {
+    setCartnum((prevCount) => prevCount + 1);
+  }
+
+
+
   const [islike, setIslike] = useState(false);
 function handelclick(item){
 setIslike(!islike)
-setIsfavo(item)
+toggelfavo(item)
 console.log(item)
 }
   return (
@@ -54,13 +74,13 @@ console.log(item)
       </div>
       <div className="price">
         <p>{item.price}</p>
-        <button>Add to cart</button>
+        <button onClick={()=>{handelnumberitem()}}>Add to cart</button>
       </div>
     </div>
   );
 }
 
-function Burger({ data, setIsfavo }) {
+function Burger({ toggelfavo, data, setIsfavo,setCartnum}) {
   return (
     <div className="burger container-lg">
       <div className="head">
@@ -72,7 +92,7 @@ function Burger({ data, setIsfavo }) {
       </div>
       <div className="body">
         {data.map((eve) => (
-          <Burgeritem key={eve.id} item={eve} setIsfavo={setIsfavo} />
+          <Burgeritem toggelfavo={toggelfavo}     setCartnum={setCartnum} key={eve.id} item={eve} setIsfavo={setIsfavo} />
         ))}
       </div>
     </div>

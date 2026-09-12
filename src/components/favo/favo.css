@@ -1,0 +1,30 @@
+.fav-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    width: 100%;
+     gap: 20px;
+    height: auto;
+    text-align: center;
+
+}
+.head-favo{
+    text-align: center;
+    margin: 20px auto;
+    font-size: 50px;
+    color: brown;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 3px;
+    text-shadow: 0px 0px 2px black;
+}
+.fav-card{
+    border: 2px red solid ;
+    border-radius: 11px;
+}
+.imgfavo{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.allpagefavo{
+    margin: 50px auto;
+}

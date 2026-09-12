@@ -1,5 +1,14 @@
  
- 
+ /* .list{
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px red solid;
+ } */
 .logo img{
     width: 150px;
 }
@@ -20,4 +29,19 @@
     box-shadow: 0px 0px 10px black;
  padding: 5px;
     border-radius:20px;
+}
+
+.icon{
+    font-size: 20px;
+    align-items: center;
+    font-weight: 500;
+position: relative;
+}
+
+.number-item{
+    position: absolute;
+    top: -13px;
+    right: -10px;
+    color: rgba(52, 2, 2, 0.641);
+    font-family: Lilita One;
 }
