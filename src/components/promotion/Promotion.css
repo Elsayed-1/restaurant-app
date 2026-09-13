@@ -1,0 +1,28 @@
+
+.container-lg{
+    margin: 20px 0px;
+}
+.pro{
+    /* border:  2px red solid; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.107);
+
+}
+.proimg img{
+    width: 300px;
+} 
+.protext p{
+    margin-left: 10px;
+}
+.protext  h1{
+    text-transform: uppercase;
+    font-family:Oswald ;
+}
+.protext h6{
+    font-weight: 400;
+}

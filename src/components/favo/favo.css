@@ -19,6 +19,7 @@
 .fav-card{
     border: 2px red solid ;
     border-radius: 11px;
+    position: relative;
 }
 .imgfavo{
     width: 100%;
@@ -27,4 +28,37 @@
 
 .allpagefavo{
     margin: 50px auto;
+    text-align: center;
 }
+
+.heart-icon{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: rgba(128, 128, 128, 0.344);  
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    bottom: 0px;
+    right: 3px;
+}
+ .btn-favo{
+    margin: 30px 0px;
+    width: 150px;
+    border: none;
+    height: 40px;
+    background-color: red;
+    font-size: 20px;
+    font-family:Oswald;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.559);
+    transition: all .3s ease ;
+ }
+  .btn-favo:hover{
+    transform: scale(1.01) translateY(-2px);
+    background-color: antiquewhite;
+    border: 3px solid red;
+  }
