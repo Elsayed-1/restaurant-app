@@ -1,7 +1,11 @@
  
- 
+ .allslider{
+  background-color: rgba(128, 128, 128, 0.186);
+  border-radius: 10px;
+  width: 100%;
+ }
   .carousel-item {
-    border: 2px red solid;
+ 
     text-align: center;
 
   }
@@ -10,4 +14,30 @@
  .carousel-item img{
     width: 150px ;
     border-radius: 100%;
+    object-fit: cover;
+    margin: 20px 0px;
  }
+  .carousel-item p{
+    margin: 20px 0px;
+    font-family: Oswald;
+    font-weight: 300;
+  }
+  .carousel-item h5{
+     margin: 50px 0px;
+      font-family: Oswald;
+    font-weight: 500;
+  }
+
+  button span{
+    background-color: gray;
+    
+    border-radius: 100%;
+  }
+
+ 
+ .carousel-indicators .active{
+  background-color:black !important;
+ 
+ }
+
+ 

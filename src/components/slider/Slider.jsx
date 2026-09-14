@@ -6,13 +6,14 @@ import img5 from "../../assets/blog/review-author-5.jpg";
 import "./Slider.css";
 function Slider() {
   return (
-    <div className="container-lg">
-      <div
+    <div className="container-lg  ">
+      <div className="allslider">
+ <div
         id="carouselExampleIndicators"
         className="carousel slide"
         data-bs-ride="carousel"
       >
-        <div className="carousel-indicators">
+        <div className="carousel-indicators  ">
           <button
             type="button"
             data-bs-target="#carouselExampleIndicators"
@@ -44,41 +45,53 @@ function Slider() {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img src={img1} className=" imgpeople " alt="Review Author 1" />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
+             <div className="">
+            
               <p>
-                Some representative placeholder content for the first slide.
-              </p>
+Etiam sapien sem at sagittis congue augue massa varius
+                  sodales sapien undo tempus dolor egestas magna suscipit magna
+                  tempus aliquet porta sodales augue suscipit luctus neque              </p>
+
+                    <h5>BY AMELIE NEWLOVE</h5>
             </div>
           </div>
 
           <div className="carousel-item">
             <img src={img2} className=" imgpeople " alt="Review Author 2" />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
+             <div className="">
+            
               <p>
-                Some representative placeholder content for the second slide.
-              </p>
+Etiam sapien sem at sagittis congue augue massa varius
+                  sodales sapien undo tempus dolor egestas magna suscipit magna
+                  tempus aliquet porta sodales augue suscipit luctus neque              </p>
+
+                    <h5>BY AMELIE NEWLOVE</h5>
             </div>
           </div>
 
           <div className="carousel-item">
             <img src={img3} className=" imgpeople  " alt="Review Author 3" />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
+             <div className="">
+            
               <p>
-                Some representative placeholder content for the third slide.
-              </p>
+Etiam sapien sem at sagittis congue augue massa varius
+                  sodales sapien undo tempus dolor egestas magna suscipit magna
+                  tempus aliquet porta sodales augue suscipit luctus neque              </p>
+
+                    <h5>BY AMELIE NEWLOVE</h5>
             </div>
           </div>
 
           <div className="carousel-item">
             <img src={img5} className=" imgpeople  " alt="Review Author 5" />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Fourth slide label</h5>
+            <div className="">
+            
               <p>
-                Some representative placeholder content for the fourth slide.
-              </p>
+Etiam sapien sem at sagittis congue augue massa varius
+                  sodales sapien undo tempus dolor egestas magna suscipit magna
+                  tempus aliquet porta sodales augue suscipit luctus neque              </p>
+
+                    <h5>BY AMELIE NEWLOVE</h5>
             </div>
           </div>
         </div>
@@ -108,6 +121,8 @@ function Slider() {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+      </div>
+     
     </div>
   );
 }

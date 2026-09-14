@@ -6,6 +6,7 @@ import Freemeal from '../freemeal/Freemeal'
 import Promotion from '../promotion/Promotion'
 import Parallax from '../parallax/Parallax'
 import Slider from '../slider/Slider'
+import Footer from '../footer/Footer'
 
 function Basic({toggelfavo,cardnum,setCartnum,data,setIsfavo}) {
   return (
@@ -17,6 +18,7 @@ function Basic({toggelfavo,cardnum,setCartnum,data,setIsfavo}) {
    <Parallax/>
    <Promotion/>
    <Slider/>
+   <Footer/>
     </div>
   )
 }

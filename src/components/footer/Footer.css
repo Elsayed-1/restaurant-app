@@ -1,0 +1,29 @@
+
+
+.footer{
+    display: flex;
+    width: 100%;
+    color: white;
+     min-height: 200px;
+     padding: 10px;
+     
+}
+
+.footersec{  
+    margin-top: 10px;
+    flex: 1;
+}
+.footersec p{
+     margin: 12px 0px;
+     font-size: 15px;
+     font-family: Oswald;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.icon a{
+    font-size: 20px;
+}
