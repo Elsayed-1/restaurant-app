@@ -4,6 +4,8 @@ import About from '../About/About'
 import Burger from '../Burgers/Burger'
 import Freemeal from '../freemeal/Freemeal'
 import Promotion from '../promotion/Promotion'
+import Parallax from '../parallax/Parallax'
+import Slider from '../slider/Slider'
 
 function Basic({toggelfavo,cardnum,setCartnum,data,setIsfavo}) {
   return (
@@ -12,7 +14,9 @@ function Basic({toggelfavo,cardnum,setCartnum,data,setIsfavo}) {
    <About/>
    <Burger toggelfavo={toggelfavo}   setCartnum={setCartnum} data={data} setIsfavo={setIsfavo}/>
    <Freemeal/>
+   <Parallax/>
    <Promotion/>
+   <Slider/>
     </div>
   )
 }

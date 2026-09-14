@@ -11,7 +11,7 @@ function Homenav({cardnum}) {
   return (
     <div className='list'>
         <nav className='navbar'>
-<div className='   container-lg'>
+ 
     <div className="logo">
  <img src={logo} alt="" />
     </div>
@@ -24,10 +24,10 @@ function Homenav({cardnum}) {
             <li onClick={()=>mynave("/favo")}>Favo</li>
             <li>contant</li>
              
-            <li className='icon'>{<FaShoppingBag/>}<span className='number-item'>{cardnum}</span></li>
+            <li className='icon-nav'>{<FaShoppingBag/>}<span className='number-item'>{cardnum}</span></li>
         </ul>
     </div>
-</div>
+ 
         </nav>
       
     </div>

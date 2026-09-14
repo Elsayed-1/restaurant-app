@@ -1,0 +1,13 @@
+ 
+ 
+  .carousel-item {
+    border: 2px red solid;
+    text-align: center;
+
+  }
+ 
+ 
+ .carousel-item img{
+    width: 150px ;
+    border-radius: 100%;
+ }
