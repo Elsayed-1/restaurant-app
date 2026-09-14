@@ -18,6 +18,7 @@ import Favorite from "./components/favo/Favorite";
 import Basic from "./components/basicfile/Basic";
 //////////////////
 import { FaHeart, FaRegHeart } from "react-icons/fa";
+import Cart from "./cart/Cart";
 const dataitem = [
   {
     id: "0001",
@@ -106,7 +107,8 @@ const dataitem = [
     paragraph: "American cheese, tomato relish, avocado, lettuce, red onion",
     rating: 2.0,
     price: 89.12,
-  }, {
+  },
+  {
     id: "00012",
     image: img3,
     title: "Black Sheep",
@@ -140,6 +142,29 @@ function App() {
 
   const [cardnum, setCartnum] = useState(0);
 
+  const [cartitem, setCartitem] = useState(() => {
+    const save = localStorage.getItem("cartitem");
+    return save ? JSON.parse(save) : [];
+  });
+  useEffect(() => {
+    (localStorage.setItem("cartitem", JSON.stringify(cartitem)));
+  }, [cartitem]);
+
+function addtocart(item){
+setCartitem((prev)=>{
+  const exists =prev.find((cart)=>cart.id == item.id)
+  if(exists){
+    return prev.map((x)=>{
+      x.id === item.id ?{...x,quantity:(x.quantity||1)+1}:x
+    })
+  }
+  else{
+    return[...prev,{ ...item, quantity: 1 }]
+  }
+})
+}
+
+
   return (
     <>
       <Routes>
@@ -148,6 +173,7 @@ function App() {
           element={
             <Basic
               toggelfavo={toggelfavo}
+              addtocart={addtocart}
               cardnum={cardnum}
               setCartnum={setCartnum}
               data={dataitem}
@@ -156,9 +182,11 @@ function App() {
           }
         />
         <Route path="/favo" element={<Favorite isfavo={isfavo} />} />
+        <Route  path="/itemaddedtocart" element={<Cart setCartitem={setCartitem} cartitem={cartitem} />} />
       </Routes>
 
       {console.log(isfavo)}
+      {console.log(cartitem)}
     </>
   );
 }

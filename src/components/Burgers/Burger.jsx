@@ -34,11 +34,12 @@ function renderstars(rate) {
   return stars;
 }
 
-function Burgeritem({toggelfavo, item, setIsfavo,setCartnum }) {
+function Burgeritem({addtocart , toggelfavo, item, setIsfavo,setCartnum }) {
 
 ///////////////
-function handelnumberitem() {
+function handelnumberitem(item) {
     setCartnum((prevCount) => prevCount + 1);
+    addtocart(item)
   }
 
 
@@ -74,13 +75,13 @@ console.log(item)
       </div>
       <div className="price">
         <p>{item.price}</p>
-        <button onClick={()=>{handelnumberitem()}}>Add to cart</button>
+        <button onClick={()=>{handelnumberitem(item)}}>Add to cart</button>
       </div>
     </div>
   );
 }
 
-function Burger({ toggelfavo, data, setIsfavo,setCartnum}) {
+function Burger({ addtocart, toggelfavo, data, setIsfavo,setCartnum}) {
   return (
     <div className="burger container-lg">
       <div className="head">
@@ -92,7 +93,7 @@ function Burger({ toggelfavo, data, setIsfavo,setCartnum}) {
       </div>
       <div className="body">
         {data.map((eve) => (
-          <Burgeritem toggelfavo={toggelfavo}     setCartnum={setCartnum} key={eve.id} item={eve} setIsfavo={setIsfavo} />
+          <Burgeritem addtocart={addtocart} toggelfavo={toggelfavo}     setCartnum={setCartnum} key={eve.id} item={eve} setIsfavo={setIsfavo} />
         ))}
       </div>
     </div>

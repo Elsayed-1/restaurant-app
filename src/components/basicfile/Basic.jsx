@@ -8,12 +8,12 @@ import Parallax from '../parallax/Parallax'
 import Slider from '../slider/Slider'
 import Footer from '../footer/Footer'
 
-function Basic({toggelfavo,cardnum,setCartnum,data,setIsfavo}) {
+function Basic({ addtocart,toggelfavo,cardnum,setCartnum,data,setIsfavo}) {
   return (
     <div>
       <Herosection cardnum={cardnum}/>
    <About/>
-   <Burger toggelfavo={toggelfavo}   setCartnum={setCartnum} data={data} setIsfavo={setIsfavo}/>
+   <Burger toggelfavo={toggelfavo} addtocart={addtocart}  setCartnum={setCartnum} data={data} setIsfavo={setIsfavo}/>
    <Freemeal/>
    <Parallax/>
    <Promotion/>

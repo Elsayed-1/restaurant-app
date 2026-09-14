@@ -24,7 +24,9 @@ function Homenav({cardnum}) {
             <li onClick={()=>mynave("/favo")}>Favo</li>
             <li>contant</li>
              
-            <li className='icon-nav'>{<FaShoppingBag/>}<span className='number-item'>{cardnum}</span></li>
+            <li onClick={()=>{
+                mynave("/itemaddedtocart")
+            }} className='icon-nav'>{<FaShoppingBag/>}<span className='number-item'>{cardnum}</span></li>
         </ul>
     </div>
  
