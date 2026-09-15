@@ -1,7 +1,4 @@
-import About from "./components/About/About";
-import Burger from "./components/Burgers/Burger";
-import Herosection from "./components/home/Herosection";
-import Homenav from "./components/home/Homenav";
+ 
 
 /////img//////
 import img1 from "./assets/menu/burger-11.jpg";
