@@ -1,6 +1,6 @@
 import React from 'react'
 import Herosection from '../home/Herosection'
-import About from '../About/About'
+import About from '../about/About'
 import Burger from '../Burgers/Burger'
 import Freemeal from '../freemeal/Freemeal'
 import Promotion from '../promotion/Promotion'
