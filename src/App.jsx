@@ -155,7 +155,7 @@ setCartitem((prev)=>{
   const exists =prev.find((cart)=>cart.id == item.id)
   if(exists){
     return prev.map((x)=>{
-      x.id === item.id ?{...x,quantity:(x.quantity||1)+1}:x
+      return x.id === item.id ?{...x,quantity:(x.quantity||1)+1}:x
     })
   }
   else{
@@ -177,7 +177,9 @@ setCartitem((prev)=>{
               cardnum={cardnum}
               setCartnum={setCartnum}
               data={dataitem}
+              isfavo={isfavo}
               setIsfavo={setIsfavo}
+              cartitem={cartitem}
             />
           }
         />

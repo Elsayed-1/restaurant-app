@@ -1,15 +1,21 @@
 import React from "react";
 import "./favo.css";
-
+import bgnofavo from "../../assets/hero/hero-1.jpg";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
-import { useNavigate   } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Favorite({ isfavo }) {
-
-  const nave=useNavigate()
+  const nave = useNavigate();
 
   if (!isfavo || isfavo.length === 0) {
-    return <h2>لا يوجد عناصر في المفضلة حالياً</h2>;
+    return (
+      <div style={{ backgroundImage: `url(${bgnofavo})` }} className="nofavo">
+        <h2>No favorite food added</h2>
+         <button onClick={()=>{
+        nave("/")
+      }} className="btn-favo">Go to home</button>
+      </div>
+    );
   }
   return (
     <div className="allpagefavo">
@@ -20,16 +26,21 @@ function Favorite({ isfavo }) {
             <img className="imgfavo" src={item.image} alt={item.title} />
             <h3>{item.title}</h3>
             <p>{item.paragraph}</p>
-            <p>${item.price}</p>
+            <p>${item.price}$</p>
             <div className="heart-icon">
-              {<FaHeart  color="#e3000e" size={30} />}
+              {<FaHeart color="#e3000e" size={30} />}
             </div>
           </div>
         ))}
       </div>
-      <button onClick={()=>{
-        nave("/")
-      }} className="btn-favo">Go to home</button>
+      <button
+        onClick={() => {
+          nave("/");
+        }}
+        className="btn-favo"
+      >
+        Go to home
+      </button>
     </div>
   );
 }

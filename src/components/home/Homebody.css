@@ -79,3 +79,43 @@ font-family: Oswald;
     border: 2px solid yellow;
     box-shadow: 0px 0px 10px black;
 }
+
+
+/*.........responsive............*/
+
+
+@media (max-width:750px){
+ 
+   .texthero .text h1{
+     font-size: 30px;
+  }
+   
+  .texthero .text h3{
+     font-size: 15px;
+  }
+   .texthero .text p{
+     font-size: 10px;
+  }
+  .imghero img{
+     width: 500px;
+  }
+}
+@media (max-width:625px){
+ 
+   .imghero img{
+     width: 450px;
+  }
+}
+
+@media (max-width:530px){
+ 
+   .imghero img{
+     width: 400px;
+  }
+}
+@media (max-width:500px){
+ 
+   .imghero img{
+     width: 350px;
+  }
+}

@@ -26,3 +26,13 @@
 .protext h6{
     font-weight: 400;
 }
+
+
+/*........responsive......*/
+
+@media (max-width:625px){
+ 
+   .pro{
+      flex-direction: column;
+  }
+}

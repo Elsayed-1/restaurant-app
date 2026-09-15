@@ -61,3 +61,23 @@
   color: rgba(52, 2, 2, 0.641);
   font-family: Lilita One;
 }
+/*................responsive................*/
+.bar{
+  display: none;
+}
+
+
+
+@media (max-width:780px){
+ 
+   .shop,.our-menu{
+    display: none;
+  }
+}
+
+@media (max-width:565px){
+  .bar,.icon-nav{ display: block !important;}
+  .listitem ul li{
+    display: none;
+  }
+}

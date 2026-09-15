@@ -1,6 +1,7 @@
 .burger{
-    /* border: 2px red solid; */
-    min-height: 60vh;
+    
+   
+    height: auto;
     z-index: 2px;
 }
 .burger .head{
@@ -88,6 +89,23 @@ text-align: center;
      justify-content: space-between;
  }
  .heart{
-    margin-right: 5px;
+    
     cursor: pointer;
+    
+     
+    border-radius: 50%;
+ }
+ .favorite{
+    width: 30px;
+    height: 30px ;
+    transition: all .3s ease;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+ }
+ .favorite:hover{
+    transform: scale(1.1);
+    background-color: rgba(128, 128, 128, 0.111);
  }

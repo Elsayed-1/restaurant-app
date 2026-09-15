@@ -1,11 +1,20 @@
 import React, { useState } from "react";
 import "./Cart.css";
+ import bgcart from "../assets/hero/hero-1.jpg"
+import { useNavigate } from "react-router-dom";
+
 function Cart({ cartitem,setCartitem }) {
 
+  const nave=useNavigate()
 
   function isempty(){
      if(cartitem.length==0)
-   return <h2>empty</h2>
+   return(<div style={{ backgroundImage: `url(${bgcart})` }} className="nocart">
+           <h2>No   food added to cart</h2>
+            <button onClick={()=>{
+           nave("/")
+         }} className="btn-favo">Go to home</button>
+         </div>) 
  
   }
 

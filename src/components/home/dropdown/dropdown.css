@@ -1,0 +1,30 @@
+
+.drop-list ul{
+list-style: none;
+ 
+}
+.drop-list ul li{
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.drop-list ul li:hover{
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.drop-list { 
+    width: 200px;
+    height: auto;
+    background-color:  white;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    border: 1px rgba(0, 0, 0, 0.119) solid;
+    top: 60px;
+    right: 20px;
+}
+
+.drop-list hr{
+    text-align: center;
+    width: 90%;
+    margin: 10px auto;
+}

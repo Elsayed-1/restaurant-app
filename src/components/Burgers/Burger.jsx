@@ -34,7 +34,7 @@ function renderstars(rate) {
   return stars;
 }
 
-function Burgeritem({addtocart , toggelfavo, item, setIsfavo,setCartnum }) {
+function Burgeritem({isfavo, addtocart , toggelfavo, item, setIsfavo,setCartnum }) {
 
 ///////////////
 function handelnumberitem(item) {
@@ -62,7 +62,7 @@ console.log(item)
           onClick={() =>handelclick(item)
            }
         >
-          {islike ? (
+          { isfavo.some((fav)=>fav.id==item.id) ? (
             <FaHeart className="heart" color="#e3000e" size={22} />
           ) : (
             <FaRegHeart className="heart" color="#757575" size={22} />
@@ -74,16 +74,17 @@ console.log(item)
         <p>{item.paragraph}</p>
       </div>
       <div className="price">
-        <p>{item.price}</p>
+        <p>{item.price} $</p>
         <button onClick={()=>{handelnumberitem(item)}}>Add to cart</button>
       </div>
     </div>
   );
 }
 
-function Burger({ addtocart, toggelfavo, data, setIsfavo,setCartnum}) {
+function Burger({isfavo, addtocart, toggelfavo, data, setIsfavo,setCartnum}) {
   return (
     <div className="burger container-lg">
+      <div className="burger"></div>
       <div className="head">
         <h1>OUR CRAZY BURGERS</h1>
         <p>
@@ -93,7 +94,7 @@ function Burger({ addtocart, toggelfavo, data, setIsfavo,setCartnum}) {
       </div>
       <div className="body">
         {data.map((eve) => (
-          <Burgeritem addtocart={addtocart} toggelfavo={toggelfavo}     setCartnum={setCartnum} key={eve.id} item={eve} setIsfavo={setIsfavo} />
+          <Burgeritem isfavo={isfavo} addtocart={addtocart} toggelfavo={toggelfavo}     setCartnum={setCartnum} key={eve.id} item={eve} setIsfavo={setIsfavo} />
         ))}
       </div>
     </div>
